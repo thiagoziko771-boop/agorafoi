@@ -1,8 +1,6 @@
 # Integração Blackcat PIX Payment Gateway
 
-Projeto de pagamento PIX integrado com Blackcat Gateway, executado na Vercel como serverless functions.
-
-**Status:** ✅ Pronto para Produção
+Projeto de pagamento PIX integrado com Blackcat Gateway, executado em Netlify/Vercel como serverless functions.
 
 ## 🚀 Quick Start - Vercel
 

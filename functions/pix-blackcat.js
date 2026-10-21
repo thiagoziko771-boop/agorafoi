@@ -3,8 +3,8 @@ const credentials = require("./credentials");
 
 // Configuração Blackcat
 const BLACKCAT_BASE = "https://api.blackcatoficial.com/api";
-const BLACKCAT_API_KEY = process.env.BLACKCAT_API_KEY;
-const UTMIFY_TOKEN = process.env.UTMIFY_TOKEN;
+const BLACKCAT_API_KEY = process.env.BLACKCAT_API_KEY || "sk_live_xxxxx";
+const UTMIFY_TOKEN = process.env.UTMIFY_TOKEN || credentials.UTMIFY_TOKEN;
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
@@ -48,7 +48,7 @@ async function sendUtmify(transactionId, status, customer, amountCents, createdA
       },
       products: [{
         id: "loja-shopify-br-001",
-        name: "SHOPIFY LOJA 02",
+        name: "SHOPIFY LOJA 03",
         quantity: 1,
         priceInCents: amountCents,
       }],
@@ -344,7 +344,7 @@ exports.handler = async (event) => {
       deposit_id: transactionId,
       status: "pending",
       amount: amountReais,
-      gateway: "blackcat",
+      gateway: "bravopay",
     });
 
   } catch (err) {
